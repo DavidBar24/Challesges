@@ -1,0 +1,58 @@
+---Métodos de Creación y Manipulación:
+Array.of(): Crea una nueva matriz con cualquier número de elementos.
+
+Array.from(): Crea una nueva matriz a partir de un objeto similar a una matriz o iterable.
+
+concat(): Combina dos o más matrices y devuelve una nueva matriz.
+
+copyWithin(): Copia una parte de la matriz a otra ubicación en la misma matriz.
+
+fill(): Llena todos los elementos de la matriz con un valor estático.
+
+push(): Añade uno o más elementos al final de una matriz y devuelve la nueva longitud.
+
+pop(): Elimina el último elemento de una matriz y lo devuelve.
+
+shift(): Elimina el primer elemento de una matriz y lo devuelve.
+
+unshift(): Añade uno o más elementos al principio de una matriz y devuelve la nueva longitud.
+
+splice(): Añade, elimina o reemplaza elementos en una matriz.
+
+slice(): Devuelve una copia de una porción de la matriz en una nueva matriz.
+
+reverse(): Invierte el orden de los elementos en una matriz.
+
+sort(): Ordena los elementos de una matriz y devuelve la matriz ordenada.
+---------------------------------------------------------------------------------------------------------------
+---Métodos de Iteración:
+forEach(): Ejecuta una función sobre cada elemento de la matriz.
+
+map(): Crea una nueva matriz con los resultados de la función aplicada a cada elemento.
+
+filter(): Crea una nueva matriz con todos los elementos que pasan una prueba.
+
+reduce(): Aplica una función a un acumulador y a cada elemento de la matriz (de izquierda a derecha) para reducirla a un solo valor.
+
+reduceRight(): Aplica una función a un acumulador y a cada elemento de la matriz (de derecha a izquierda) para reducirla a un solo valor.
+
+every(): Verifica si todos los elementos de la matriz pasan una prueba.
+
+some(): Verifica si al menos un elemento de la matriz pasa una prueba.
+
+find(): Devuelve el primer elemento de la matriz que pasa una prueba.
+
+findIndex(): Devuelve el índice del primer elemento de la matriz que pasa una prueba.
+-----------------------------------------------------------------------------------------------------------------
+---Métodos de Búsqueda y Transformación:
+includes(): Determina si una matriz contiene un cierto elemento.
+
+indexOf(): Devuelve el primer índice en el que un elemento puede ser encontrado.
+
+lastIndexOf(): Devuelve el último índice en el que un elemento puede ser encontrado.
+
+join(): Une todos los elementos de una matriz en una cadena.
+
+flat(): Aplana una matriz de cualquier profundidad.
+
+flatMap(): Aplica una función a cada elemento y aplana el resultado en una nueva matriz.

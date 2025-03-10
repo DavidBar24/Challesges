@@ -1,0 +1,101 @@
+Funciones Regulares
+Las funciones regulares se declaran utilizando la palabra clave function. Ejemplo:
+
+function suma(a, b) {
+  return a + b;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Funciones de Flecha
+Las funciones de flecha se introdujeron en ECMAScript 6 (ES6) y tienen una sintaxis más corta. Ejemplo:
+
+const suma = (a, b) => a + b;
+--------------------------------------------------------------------------------------------------------------------------------------
+Diferencias Clave
+Sintaxis Más Concisa:
+
+Función Regular:
+
+function saludar(nombre) {
+  return 'Hola ' + nombre;
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+Función de Flecha:
+
+const saludar = (nombre) => 'Hola ' + nombre;
+
+this Léxico: En las funciones regulares, el valor de this depende de cómo se llama la función.
+En las funciones de flecha, el valor de this se determina en el momento en que la función de flecha es definida, y no cambia nunca.
+
+const obj = {
+  valor: 42,
+  funcionRegular: function() {
+    console.log(this.valor); // 42
+  },
+  funcionFlecha: () => {
+    console.log(this.valor); // undefined (porque `this` es léxico y apunta al scope exterior)
+  }
+};
+
+obj.funcionRegular();
+obj.funcionFlecha();
+---------------------------------------------------------------------------------------------------------------------------------------
+No Tiene arguments:
+Las funciones de flecha no tienen su propio objeto arguments. Tendrías que usar el operador rest ... para acceder a los argumentos.
+Las funciones regulares sí tienen acceso al objeto arguments.
+
+function funcionRegular() {
+  console.log(arguments);
+}
+
+const funcionFlecha = () => {
+  console.log(arguments); // Error: arguments is not defined
+};
+
+No Se Puede Usar como Constructores:
+Las funciones de flecha no pueden ser usadas como constructores y no tienen el método prototype.
+Las funciones regulares pueden ser usadas como constructores y tienen el método prototype.
+
+const Persona = (nombre) => {
+  this.nombre = nombre;
+};
+
+const PersonaRegular = function(nombre) {
+  this.nombre = nombre;
+};
+
+const p1 = new Persona('Juan'); // Error: Persona is not a constructor
+const p2 = new PersonaRegular('Juan'); // Funciona
+
+
+Actividad:
+Crear una nueva función de tipo regular y de tipo flecha, que debe recibir un número y 
+se imprimirá en la consola si ese número es par o impar
+
+Función Regular:
+
+function esParOImpar(num) {
+  if (num % 2 === 0) {
+    console.log(num + " es par");
+  } else {
+    console.log(num + " es impar");
+  }
+}
+
+// Ejemplo de uso
+esParOImpar(4); // Imprime "4 es par"
+esParOImpar(7); // Imprime "7 es impar"
+
+Función de Flecha:
+
+const esParOImparFlecha = (num) => {
+  if (num % 2 === 0) {
+    console.log(num + " es par");
+  } else {
+    console.log(num + " es impar");
+  }
+};
+
+// Ejemplo de uso
+esParOImparFlecha(4); // Imprime "4 es par"
+esParOImparFlecha(7); // Imprime "7 es impar"
+

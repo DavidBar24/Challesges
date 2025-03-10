@@ -1,0 +1,164 @@
+Var, Let y Const
+Var: Se utiliza para declarar variables globales o locales a nivel de función.
+
+
+var nombre = "Juan";
+if (true) {
+  var nombre = "Pedro";
+}
+console.log(nombre); // "Pedro"
+Let: Se utiliza para declarar variables locales con ámbito de bloque.
+
+
+let nombre = "Juan";
+if (true) {
+  let nombre = "Pedro";
+}
+console.log(nombre); // "Juan"
+
+Const: Se utiliza para declarar constantes, variables cuyo valor no puede cambiar.
+
+const nombre = "Juan";
+nombre = "Pedro"; // Error: Assignment to constant variable.
+
+Template Strings
+Permiten incrustar expresiones dentro de cadenas utilizando la sintaxis ${}.
+
+let nombre = "Juan";
+let saludo = `Hola, ${nombre}!`;
+console.log(saludo); // "Hola, Juan!"
+
+Objects
+Estructuras de datos que contienen pares clave-valor.
+
+let persona = {
+  nombre: "Juan",
+  edad: 30,
+  saludar: function() {
+    console.log(`Hola, me llamo ${this.nombre}`);
+  }
+};
+persona.saludar(); // "Hola, me llamo Juan"
+
+Shallow Copy vs Deep Copy
+Shallow Copy: Copia superficial de un objeto.
+
+let original = { nombre: "Juan" };
+let copia = { ...original };
+copia.nombre = "Pedro";
+console.log(original.nombre); // "Juan"
+Deep Copy: Copia profunda de un objeto.
+
+let original = { nombre: "Juan", direccion: { ciudad: "Bogotá" } };
+let copia = JSON.parse(JSON.stringify(original));
+copia.direccion.ciudad = "Cali";
+console.log(original.direccion.ciudad); // "Bogotá"
+Arrays
+Listas ordenadas de elementos.
+
+let numeros = [1, 2, 3, 4];
+console.log(numeros[0]); // 1
+Arrays Functions
+forEach:
+
+numeros.forEach(num => console.log(num));
+
+map:
+
+let dobles = numeros.map(num => num * 2);
+console.log(dobles); // [2, 4, 6, 8]
+filter:
+
+let pares = numeros.filter(num => num % 2 === 0);
+console.log(pares); // [2, 4]
+reduce:
+
+let suma = numeros.reduce((total, num) => total + num, 0);
+console.log(suma); // 10
+
+Spread Operator
+Permite expandir elementos de un arreglo u objeto.
+
+let numeros = [1, 2, 3];
+let nuevosNumeros = [...numeros, 4, 5];
+console.log(nuevosNumeros); // [1, 2, 3, 4, 5]
+
+Destructuring Assignment
+Extraer valores de arreglos u objetos.
+
+let [a, b] = [1, 2];
+console.log(a); // 1
+console.log(b); // 2
+
+let { nombre, edad } = persona;
+console.log(nombre); // "Juan"
+console.log(edad); // 30
+
+Functions
+Función Regular:
+
+function sumar(a, b) {
+  return a + b;
+}
+console.log(sumar(2, 3)); // 5
+
+Función de Flecha:
+
+const sumar = (a, b) => a + b;
+console.log(sumar(2, 3)); // 5
+
+Imports and Exports
+Export:
+
+// modulo.js
+export const PI = 3.14;
+export function areaDelCirculo(radio) {
+  return PI * radio * radio;
+}
+
+Import:
+
+// app.js
+import { PI, areaDelCirculo } from './modulo';
+console.log(PI); // 3.14
+console.log(areaDelCirculo(2)); // 12.56
+
+Promises
+Manejan operaciones asíncronas.
+
+let promesa = new Promise((resolver, rechazar) => {
+  setTimeout(() => resolver("Hecho!"), 1000);
+});
+
+promesa.then(resultado => console.log(resultado)); // "Hecho!"
+
+Async - Await
+Simplifica el trabajo con Promises.
+
+async function obtenerDatos() {
+  let respuesta = await fetch('https://api.example.com/data');
+  let datos = await respuesta.json();
+  console.log(datos);
+}
+obtenerDatos();
+
+Null Check Ternary
+Condicional ternario para verificar null.
+
+let mensaje = null;
+let resultado = mensaje ? mensaje : "No hay mensaje";
+console.log(resultado); // "No hay mensaje"
+
+Loops
+For Loop:
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+While Loop:
+
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
