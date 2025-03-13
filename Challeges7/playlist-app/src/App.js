@@ -16,6 +16,7 @@ function App() {
               <li><Link to="/linked-list">Lista Enlazada</Link></li>
               <li><Link to="/doubly-linked-list">Lista Doblemente Enlazada</Link></li>
             </ul>
+            <h1>La demostracion de los enlaces estan abajo del todo</h1>
           </nav>
         </header>
         <Routes>
